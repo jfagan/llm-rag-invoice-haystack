@@ -1,0 +1,12 @@
+haystack-ai=2.0.1
+sentence-transformers>=2.2.0 
+huggingface_hub>=0.22.0
+transformers
+markdown-it-py 
+mdit_plain 
+pypdf
+argparse
+pinecone-haystack
+python-dotenv
+weaviate-haystack
+python-box

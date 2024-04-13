@@ -1,0 +1,6 @@
+DATA_PATH: 'data/'
+EMBEDDINGS: 'sentence-transformers/all-MiniLM-L6-v2'
+LLM_MODEL: 'meta-llama/Llama-2-7b-chat-hf'
+WEAVIATE_URL: 'http://weaviate:8080'
+PRE_PROCESSOR_SPLIT_LENGTH: 1000
+PRE_PROCESSOR_SPLIT_OVERLAP: 0
