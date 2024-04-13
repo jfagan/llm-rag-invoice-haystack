@@ -34,7 +34,7 @@ You will need to have a Hugging Face API token in your local environment:
 3. Open a new CLI tab and perform the following to SSH into your running container:
 
 - Retrieve your `CONTAINER_ID` with `docker ps`.
-- Access the container using `docker exec -it {CONTAINER_ID} bash`.
+- Access the container using `docker exec -it CONTAINER_ID bash`.
 
 4. Run the script to convert PDF documents to vector embeddings and save them in Weaviate vector storage:
 
