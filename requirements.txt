@@ -1,4 +1,4 @@
-haystack-ai=2.0.1
+haystack-ai==2.0.1
 sentence-transformers>=2.2.0 
 huggingface_hub>=0.22.0
 transformers
