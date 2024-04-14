@@ -34,28 +34,34 @@ You will need to have a Hugging Face API token in your local environment:
 
 ## Examples 
 
-`python main.py "What is the invoice seller name, address and tax ID? use this format for the answer {\"seller_name\": {},\"address\": {},\"tax_id\": {}}"`
+```
+python main.py "What is the invoice seller name, address and tax ID? use this format for the answer {\"seller_name\": {},\"address\": {},\"tax_id\": {}}"
 
 Answer:
  {"seller_name": "Chapman, Kim and Green", "address": "64731 James Branch Smithmouth, NC 26872", "tax_id": "949-84-9105"}
 ==================================================
 Time to retrieve answer: 3.551683001991478
+```
 
 
-`python main.py "retrieve invoice IBAN in the format {\"invoice_iban\": {}}"`
+```
+python main.py "retrieve invoice IBAN in the format {\"invoice_iban\": {}}"
 
 Answer:
 {"invoice_iban": {"GB50ACIE59715038217063"}}
 ==================================================
 Time to retrieve answer: 9.18394808798621
+```
 
 
-`python main.py "retrieve two values: net price and gross worth for the second invoice item in this format: {\"net_price\": {},\"gross_worth\": {}}"`
+```
+python main.py "retrieve two values: net price and gross worth for the second invoice item in this format: {\"net_price\": {},\"gross_worth\": {}}"
 
 Answer:
 {"net_price": {"1.00": 7.50},"gross_worth": {"1.00": 12.99}}
 ==================================================
 Time to retrieve answer: 3.623518834996503
+```
 
 
 ## Credits
