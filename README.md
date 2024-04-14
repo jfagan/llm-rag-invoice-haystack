@@ -1,20 +1,8 @@
 # RAG Invoice Data Processing with Llama2, Haystack 2, & Docker
 
-## Credits
-
-This project is based on [Andrej Baranovskij's original work](https://github.com/katanaml/llm-rag-invoice-cpu).
-
-## Changes
-
-- The code has been refactored to integrate with Haystack 2, and now utilizes Llama2 hosted on HuggingFace. This change enhances response times and simplifies the architecture by eliminating the need for a local LLM.
-- The application is fully containerized using Docker.
-- Response times have significantly improved, and all scenarios in the `prompts-structured` directory are now generating answers.
-
 ## Requirements
 
 To run this project, you will need a Hugging Face API token, which should be set in your local environment as follows:
-
-## Requirements
 
 You will need to have a Hugging Face API token in your local environment:
 
@@ -43,3 +31,39 @@ You will need to have a Hugging Face API token in your local environment:
 5. Run the following script to process inquiries about the data and fetch the answers:
 
 `python main.py "What is the invoice number value?"`
+
+## Examples 
+
+`python main.py "What is the invoice seller name, address and tax ID? use this format for the answer {\"seller_name\": {},\"address\": {},\"tax_id\": {}}"`
+
+Answer:
+ {"seller_name": "Chapman, Kim and Green", "address": "64731 James Branch Smithmouth, NC 26872", "tax_id": "949-84-9105"}
+==================================================
+Time to retrieve answer: 3.551683001991478
+
+
+`python main.py "retrieve invoice IBAN in the format {\"invoice_iban\": {}}"`
+
+Answer:
+{"invoice_iban": {"GB50ACIE59715038217063"}}
+==================================================
+Time to retrieve answer: 9.18394808798621
+
+
+`python main.py "retrieve two values: net price and gross worth for the second invoice item in this format: {\"net_price\": {},\"gross_worth\": {}}"`
+
+Answer:
+{"net_price": {"1.00": 7.50},"gross_worth": {"1.00": 12.99}}
+==================================================
+Time to retrieve answer: 3.623518834996503
+
+
+## Credits
+
+This project is based on [Andrej Baranovskij's original work](https://github.com/katanaml/llm-rag-invoice-cpu).
+
+## Changes
+
+- The code has been refactored to integrate with Haystack 2, and now utilizes Llama2 hosted on HuggingFace. This change enhances response times and simplifies the architecture by eliminating the need for a local LLM.
+- The application is fully containerized using Docker.
+- Response times have significantly improved, and all scenarios in the `prompts-structured` directory are now generating answers.
